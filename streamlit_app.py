@@ -20,7 +20,7 @@ with st.expander("Data Preview"):
 
 with st.expander("Data Visualization"):
   st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
-  st.bar_chart(df,x="body_mass_g",y="species",color="species")
+  st.bar_chart(df.groupby("species",as_index=False)["body_mass_g"].mean(),x="body_mass_g",y="species",color="species")
   
       
 
