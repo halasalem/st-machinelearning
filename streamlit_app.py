@@ -18,7 +18,7 @@ with st.expander("Data Preview"):
   y=df['species']
   y
 
-with st.expander("Data Visualization"):
+#with st.expander("Data Visualization"):
   
       
 
