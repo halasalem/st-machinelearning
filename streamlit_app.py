@@ -19,7 +19,8 @@ with st.expander("Data Preview"):
   y
 
 with st.expander("Data Visualization"):
-  st.line_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
+  st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
+  st.bar_chart(df,x="body_mass_g",y="species",color="species")
   
       
 
