@@ -26,6 +26,12 @@ with st.expander("Data Visualization"):
   st.plotly_chart(fig, use_container_width=True)
   fig=px.histogram(df,x="bill_length_mm",color="species",barmode="overlay",title="Distribution of Bill Length by Species")
   st.plotly_chart(fig)
+
+with st.sidebar():
+  st.header("Input Features")
+  island=st.selectbox("Island",("Biscoe","Dream","Torgersen"))
+  gender= st.selectbox("Gender",("Male","Female"))
+  bill_length=st.slider('Bill Length (mm)',32.1, 59.6, 43.9)
   
       
 
