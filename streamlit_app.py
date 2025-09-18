@@ -18,7 +18,8 @@ with st.expander("Data Preview"):
   y=df['species']
   y
 
-#with st.expander("Data Visualization"):
+with st.expander("Data Visualization"):
+  st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
   
       
 
