@@ -32,6 +32,9 @@ with st.sidebar:
   island=st.selectbox("Island",("Biscoe","Dream","Torgersen"))
   gender= st.selectbox("Gender",("Male","Female"))
   bill_length=st.slider('Bill Length (mm)',32.1, 59.6, 43.9)
+  bill_depth=st.slider('Bill depth (mm)',13.1,21.5,17.2)
+  flipper_length=st.slider('Flipper Length (mm)',172.0,231.0,201.0)
+  body_mass=st.slider("Body Mass (g)",2700.0,6300.0,4207.0)
   
       
 
