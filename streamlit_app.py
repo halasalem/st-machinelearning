@@ -20,7 +20,7 @@ with st.expander("Data Preview"):
   y
 
 with st.expander("Data Visualization"):
-  st.subheader("Penguin Bill Length vs. Bill Depth by Species")
+  st.markdown("Penguin Bill Length vs. Bill Depth by Species")
   st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
   fig=px.strip(df,x="island",y="body_mass_g", color="island",title="Body Mass Distributions by Island")
   st.plotly_chart(fig, use_container_width=True)
