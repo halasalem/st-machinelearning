@@ -22,7 +22,7 @@ with st.expander("Data Preview"):
 with st.expander("Data Visualization"):
   st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
   st.bar_chart(df.groupby("island",as_index=False)["body_mass_g"].mean(),x="body_mass_g",y="island",color="island")
-  fig=px.box(df,x="island",y="body_mass_g", color="island",title="Body Mass Distributions by Island")
+  fig=px.strip(df,x="island",y="body_mass_g", color="island",title="Body Mass Distributions by Island")
   st.plotly_chart(fig, use_container_width=True)
   
       
