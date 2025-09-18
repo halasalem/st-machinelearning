@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 st.title("🤖 Machine Learning App")
 st.info("This app builds a machine learning model")
@@ -21,6 +22,8 @@ with st.expander("Data Preview"):
 with st.expander("Data Visualization"):
   st.scatter_chart(df,x="bill_length_mm",y="bill_depth_mm",color="species")
   st.bar_chart(df.groupby("island",as_index=False)["body_mass_g"].mean(),x="body_mass_g",y="island",color="island")
+  fig=px.box(df,x="island",y="body_mass_g", color="island",title="Body Mass Distributions by Island")
+  st.plotly_chart(fig, use_container_width=True)
   
       
 
